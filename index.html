@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="Monograph Dashboard which help you showcase your Project">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | Project tracking intro component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👝 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <img src="images/logo.svg" alt="Logo">
+    <ul class="desktop">
+      <li class="ms-2 bold--text">Product</li>
+      <li class="ms-2 bold--text">Features</li>
+      <li class="ms-2 bold--text">Pricing</li>
+      <li class="ml-5 bold--text disabled">Login</li>
+    </ul>
+    <img src="images/icon-hamburger.svg" alt="icon-hamburger" class="iconHamburger">
+    <ul class="phone">
+      <li class="bold--text"><a href="#">Product </a> </li>
+      <li class="bold--text"><a href="#">Features</a> </li>
+      <li class="bold--text"><a href="#">Pricing </a> </li>
+      <li class="bold--text disabled">Login</li>
+    </ul>
+  </nav>
+  <div class="wrapper">
+    <main class="block">
+      <div class="block--text my-4">
+
+        <p  class="monospaced"><span class="btn-sm mr-1">New</span>Monograph Dashboard</p>
+        <h1 class="my-1  bold--text">Powerful insights into your team</h1>
+        <p>  Project planning and time tracking for agile teams</p>
+
+      </div>
+      <button class="btn bold--text">Schedule a demo</button> <p style="display: inline;" class="monospaced">to see a live preview</p>
+    </main>
+
+    <div class="image-div">
+      <img src="images/illustration-devices.svg" alt="illustration-devices" class="image">
+    </div>
+  </div>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Abdulsalam</a>.
+    </p>
+  </footer>
+  <script>
+    let iconHamburger = document.querySelector(".iconHamburger");
+    let nav = document.querySelector('.phone')
+   
+   iconHamburger.addEventListener("click", () => {
+      nav.classList.toggle("mobile");
+      let attribute = iconHamburger.getAttribute('src');
+      if(attribute === "images/icon-hamburger.svg") {
+          iconHamburger.setAttribute('src', "images/icon-close.svg") 
+      } else {
+          iconHamburger.setAttribute('src', "images/icon-hamburger.svg") 
+      }
+   })
+  </script>
+</body>
+</html> 
